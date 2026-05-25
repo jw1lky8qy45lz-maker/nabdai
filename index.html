@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1a1a2e">
+<title>نبض | أخبار العالم لحظة بلحظة — أحدث الأخبار العربية والعالمية</title>
+<meta name="description" content="نبض — بوابتك الإخبارية الأولى للأخبار العاجلة. تابع أحدث أخبار السياسة والاقتصاد والرياضة والتقنية والصحة من العالم العربي والعالمي لحظة بلحظة.">
+<meta name="keywords" content="أخبار, أخبار عاجلة, أخبار اليوم, أخبار العراق, أخبار السعودية, أخبار الخليج, أخبار العالم, سياسة, اقتصاد, رياضة, تقنية, صحة, نبض">
+<meta name="author" content="نبض للأخبار">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="language" content="Arabic">
+<meta name="revisit-after" content="1 days">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="نبض | أخبار العالم">
+<meta property="og:title" content="نبض — أحدث الأخبار العربية والعالمية لحظة بلحظة">
+<meta property="og:description" content="تابع أحدث الأخبار العاجلة والتحليلات في السياسة والاقتصاد والرياضة والتقنية والصحة.">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="نبض — أخبار العالم لحظة بلحظة">
+<meta name="twitter:description" content="تابع أحدث الأخبار العاجلة من العالم العربي والعالمي على نبض.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "نبض",
+  "alternateName": "Nabdai News",
+  "description": "بوابة إخبارية عربية تقدم أحدث الأخبار المحلية والعالمية",
+  "inLanguage": "ar"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --red:#e63946;
+  --dark:#0a0a0f;
+  --dark2:#12121a;
+  --dark3:#1a1a28;
+  --card:#16161f;
+  --border:rgba(255,255,255,0.06);
+  --text:#f0f0f0;
+  --text2:#9090a8;
+  --accent:#e63946;
+  --gold:#f4c430;
+  --blue:#4a9eff;
+  --green:#2ecc71;
+}
+body{font-family:'Tajawal',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--dark);}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px;}
+
+/* TOP BAR */
+.topbar{
+  background:var(--dark2);
+  border-bottom:1px solid var(--border);
+  padding:8px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:11px;
+  color:var(--text2);
+}
+.topbar-right{display:flex;align-items:center;gap:20px;}
+.topbar-right a{color:var(--text2);text-decoration:none;transition:color .2s;}
+.topbar-right a:hover{color:var(--red);}
+.topbar-weather{display:flex;align-items:center;gap:6px;color:var(--text2);}
+.live-dot{width:7px;height:7px;background:var(--red);border-radius:50%;animation:livePulse 1.5s ease-in-out infinite;display:inline-block;margin-left:6px;}
+@keyframes livePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+/* BREAKING */
+.breaking{
+  background:linear-gradient(90deg,var(--red),#b71c1c);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  height:36px;
+}
+.breaking-label{
+  background:rgba(0,0,0,0.3);
+  padding:0 16px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2px;
+  white-space:nowrap;
+  flex-shrink:0;
+  gap:6px;
+}
+.breaking-scroll{overflow:hidden;flex:1;}
+.breaking-inner{display:flex;white-space:nowrap;animation:scroll 40s linear infinite;font-size:13px;font-weight:600;}
+.breaking-inner span{padding:0 30px;}
+.breaking-inner span::before{content:"● ";opacity:.6;}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HEADER */
+header{
+  background:var(--dark2);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(20px);
+}
+.header-inner{
+  max-width:1280px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  height:65px;
+  gap:20px;
+}
+.logo{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
+}
+.logo-name{
+  font-size:30px;
+  font-weight:900;
+  color:#fff;
+  letter-spacing:-1px;
+  line-height:1;
+}
+.logo-name span{color:var(--red);}
+.logo-sub{font-size:9px;color:var(--text2);letter-spacing:3px;text-transform:uppercase;}
+
+/* NAV */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  flex:1;
+  justify-content:center;
+}
+.nav-links a{
+  color:var(--text2);
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:600;
+  transition:all .2s;
+  white-space:nowrap;
+}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,0.06);}
+.nav-links a.active{color:var(--red);}
+
+/* SEARCH */
+.header-search{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.search-wrap{
+  display:flex;
+  align-items:center;
+  background:var(--dark3);
+  border:1px solid var(--border);
+  border-radius:50px;
+  padding:7px 16px;
+  gap:8px;
+  transition:border-color .3s;
+}
+.search-wrap:focus-within{border-color:rgba(230,57,70,0.4);}
+.search-wrap input{
+  background:none;
+  border:none;
+  outline:none;
+  color:var(--text);
+  font-family:'Tajawal',sans-serif;
+  font-size:13px;
+  width:160px;
+}
+.search-wrap input::placeholder{color:var(--text2);}
+.search-icon{color:var(--text2);font-size:14px;}
+.admin-btn{
+  background:none;
+  border:1px solid rgba(255,255,255,0.08);
+  color:rgba(255,255,255,0.2);
+  width:34px;height:34px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+  transition:all .3s;
+  display:flex;align-items:center;justify-content:center;
+}
+.admin-btn:hover{border-color:rgba(230,57,70,0.3);color:rgba(230,57,70,0.5);}
+
+/* MODAL */
+.modal-overlay{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,0.9);
+  backdrop-filter:blur(10px);
+  z-index:9999;
+  display:none;align-items:center;justify-content:center;
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:var(--dark2);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:48px 40px;
+  width:360px;
+  text-align:center;
+  animation:modalIn .3s ease;
+}
+@keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-icon{font-size:50px;margin-bottom:20px;}
+.modal-title{font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;}
+.modal-sub{font-size:13px;color:var(--text2);margin-bottom:30px;}
+.modal input{
+  width:100%;padding:14px;
+  background:var(--dark3);
+  border:1px solid var(--border);
+  border-radius:12px;
+  color:#fff;font-size:18px;
+  font-family:'Tajawal',sans-serif;
+  text-align:center;letter-spacing:8px;
+  outline:none;margin-bottom:10px;
+  transition:border-color .3s;
+}
+.modal input:focus{border-color:var(--red);}
+.modal-error{color:#ef4444;font-size:12px;min-height:18px;margin-bottom:10px;}
+.modal-btn{
+  width:100%;padding:14px;
+  background:var(--red);
+  color:#fff;border:none;border-radius:12px;
+  font-size:16px;font-weight:700;
+  font-family:'Tajawal',sans-serif;
+  cursor:pointer;transition:all .3s;
+}
+.modal-btn:hover{background:#c62828;transform:translateY(-1px);}
+.modal-cancel{
+  margin-top:12px;background:none;border:none;
+  color:var(--text2);font-size:13px;cursor:pointer;
+  font-family:'Tajawal',sans-serif;
+}
+
+/* ADMIN PANEL */
+.admin-panel{
+  display:none;
+  background:linear-gradient(135deg,var(--dark2),var(--dark3));
+  border-bottom:1px solid rgba(230,57,70,0.2);
+  padding:20px 24px;
+}
+.admin-panel.open{display:block;}
+.adm-inner{max-width:1280px;margin:0 auto;}
+.adm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;}
+.adm-title{font-size:16px;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px;}
+.adm-badge{background:var(--red);color:#fff;font-size:10px;padding:2px 8px;border-radius:50px;font-weight:700;}
+.adm-logout{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#ef4444;padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s;}
+.adm-logout:hover{background:rgba(239,68,68,0.2);}
+.adm-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;}
+.adm-stat{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center;}
+.adm-val{font-size:24px;font-weight:900;font-family:monospace;}
+.adm-lbl{font-size:10px;color:var(--text2);margin-top:3px;text-transform:uppercase;letter-spacing:1px;}
+.vg{color:var(--green)}.vb{color:var(--blue)}.vy{color:var(--gold)}.vr{color:var(--red)}
+.adm-chart{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px;}
+.adm-chart-lbl{font-size:11px;color:var(--text2);margin-bottom:10px;}
+.adm-bars{display:flex;align-items:flex-end;gap:5px;height:60px;}
+.adm-bar{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(to top,var(--red),#ff6b6b);animation:barUp .8s ease both;}
+@keyframes barUp{from{transform:scaleY(0);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
+.adm-pays{display:flex;gap:8px;flex-wrap:wrap;}
+.adm-pay{background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text);padding:7px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s;}
+.adm-pay:hover{background:var(--red);border-color:var(--red);}
+
+/* HERO SECTION */
+.hero{
+  background:linear-gradient(135deg,var(--dark2) 0%,var(--dark3) 100%);
+  border-bottom:1px solid var(--border);
+  padding:30px 24px;
+}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr;gap:20px;}
+
+/* HERO MAIN CARD */
+.hero-main{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .3s;
+  position:relative;
+}
+.hero-main:hover{transform:translateY(-3px);border-color:rgba(230,57,70,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+.hero-img{
+  width:100%;height:300px;
+  background:linear-gradient(135deg,#1a1a2e,#2d2d44);
+  display:flex;align-items:center;justify-content:center;
+  font-size:80px;position:relative;overflow:hidden;
+}
+.hero-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,15,.95) 0%,rgba(10,10,15,.3) 60%,transparent 100%);
+}
+.hero-img-content{position:relative;z-index:1;}
+.hero-body{padding:24px;}
+.cat-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--red);color:#fff;
+  font-size:10px;font-weight:800;
+  padding:4px 12px;border-radius:50px;
+  letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.hero-title{font-size:22px;font-weight:800;line-height:1.4;color:#fff;margin-bottom:12px;}
+.hero-excerpt{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:16px;}
+.hero-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--text2);}
+.hero-meta span{display:flex;align-items:center;gap:5px;}
+
+/* HERO SIDE */
+.hero-side{display:flex;flex-direction:column;gap:12px;}
+.side-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .3s;
+  display:flex;
+  gap:0;
+}
+.side-card:hover{border-color:rgba(230,57,70,0.3);transform:translateX(-4px);}
+.side-img{
+  width:100px;height:90px;
+  background:linear-gradient(135deg,#1a1a2e,#2d2d44);
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;flex-shrink:0;
+}
+.side-body{padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between;}
+.side-cat{font-size:9px;font-weight:800;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+.side-title{font-size:13px;font-weight:700;color:var(--text);line-height:1.5;}
+.side-meta{font-size:10px;color:var(--text2);margin-top:6px;}
+
+/* MAIN LAYOUT */
+.main-wrap{max-width:1280px;margin:30px auto;padding:0 24px;display:grid;grid-template-columns:1fr 300px;gap:24px;}
+
+/* SECTION TITLE */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.sec-title{font-size:16px;font-weight:800;color:#fff;display:flex;align-items:center;gap:10px;}
+.sec-title::before{content:'';width:4px;height:20px;background:var(--red);border-radius:2px;display:block;}
+.sec-more{font-size:12px;color:var(--text2);text-decoration:none;display:flex;align-items:center;gap:4px;transition:color .2s;}
+.sec-more:hover{color:var(--red);}
+
+/* CATEGORIES */
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.cat-btn{
+  padding:7px 16px;border-radius:50px;
+  font-size:12px;font-weight:700;
+  cursor:pointer;border:1px solid var(--border);
+  background:transparent;color:var(--text2);
+  font-family:'Tajawal',sans-serif;
+  transition:all .2s;white-space:nowrap;
+}
+.cat-btn:hover,.cat-btn.active{background:var(--red);color:#fff;border-color:var(--red);}
+
+/* NEWS GRID */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
+.news-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .3s;
+}
+.news-card:hover{border-color:rgba(230,57,70,0.3);transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,0,0,0.3);}
+.nc-img{
+  width:100%;height:160px;
+  background:linear-gradient(135deg,#12121a,#1a1a28);
+  display:flex;align-items:center;justify-content:center;
+  font-size:48px;
+}
+.nc-body{padding:16px;}
+.nc-cat{font-size:9px;font-weight:800;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.nc-title{font-size:15px;font-weight:700;color:var(--text);line-height:1.5;margin-bottom:8px;}
+.nc-meta{font-size:11px;color:var(--text2);display:flex;gap:12px;}
+
+/* NEWS LIST */
+.news-list{display:flex;flex-direction:column;gap:10px;}
+.nl-item{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+  display:flex;gap:14px;
+  cursor:pointer;
+  transition:all .3s;
+}
+.nl-item:hover{border-color:rgba(230,57,70,0.3);transform:translateX(-4px);}
+.nl-img{
+  width:80px;height:68px;border-radius:10px;
+  background:linear-gradient(135deg,#12121a,#1a1a28);
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;flex-shrink:0;
+}
+.nl-body{}
+.nl-cat{font-size:9px;font-weight:800;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+.nl-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.5;margin-bottom:6px;}
+.nl-meta{font-size:11px;color:var(--text2);display:flex;gap:10px;}
+
+/* AD SLOT */
+.ad-slot{
+  border:1px dashed rgba(255,255,255,0.08);
+  border-radius:12px;
+  margin:20px 0;
+  overflow:hidden;
+}
+.ad-lbl{font-size:9px;color:rgba(255,255,255,0.2);text-align:center;padding:4px;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.05);}
+.ad-body{
+  min-height:90px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.02);
+  color:rgba(255,255,255,0.15);
+  font-size:12px;gap:8px;
+}
+
+/* SIDEBAR */
+.sidebar{}
+.widget{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:18px;}
+.widget-title{font-size:13px;font-weight:800;color:#fff;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;}
+.widget-title span{color:var(--red);}
+
+/* TRENDING */
+.trend-item{display:flex;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);cursor:pointer;transition:opacity .2s;}
+.trend-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.trend-item:hover{opacity:.8;}
+.trend-num{font-size:28px;font-weight:900;color:rgba(230,57,70,0.2);font-family:monospace;line-height:1;flex-shrink:0;width:36px;}
+.trend-body{}
+.trend-title{font-size:13px;font-weight:700;color:var(--text);line-height:1.5;margin-bottom:4px;}
+.trend-meta{font-size:11px;color:var(--text2);}
+
+/* WEATHER */
+.weather-main{text-align:center;padding:10px 0 16px;}
+.weather-icon{font-size:52px;margin-bottom:8px;}
+.weather-temp{font-size:42px;font-weight:900;color:#fff;}
+.weather-city{font-size:13px;color:var(--text2);margin-top:4px;}
+.weather-details{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;}
+.weather-det{background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;text-align:center;}
+.weather-det-val{font-size:16px;font-weight:700;color:#fff;}
+.weather-det-lbl{font-size:10px;color:var(--text2);margin-top:2px;}
+
+/* FOOTER */
+footer{
+  background:var(--dark2);
+  border-top:1px solid var(--border);
+  padding:50px 24px 24px;
+  margin-top:40px;
+}
+.footer-inner{max-width:1280px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-logo{font-size:28px;font-weight:900;color:#fff;margin-bottom:12px;}
+.footer-logo span{color:var(--red);}
+.footer-desc{font-size:13px;color:var(--text2);line-height:1.8;}
+.footer-social{display:flex;gap:10px;margin-top:16px;}
+.social-btn{
+  width:34px;height:34px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--border);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;cursor:pointer;
+  transition:all .2s;text-decoration:none;color:var(--text2);
+}
+.social-btn:hover{background:var(--red);border-color:var(--red);color:#fff;}
+.footer-col h4{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:10px;}
+.footer-col ul li a{color:var(--text2);text-decoration:none;font-size:13px;transition:color .2s;display:flex;align-items:center;gap:6px;}
+.footer-col ul li a:hover{color:var(--red);}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text2);}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .main-wrap{grid-template-columns:1fr;padding:0 14px;}
+  .news-grid{grid-template-columns:1fr;}
+  .header-inner{padding:0;}
+  .nav-links{display:none;}
+  .search-wrap input{width:120px;}
+  .adm-stats{grid-template-columns:repeat(2,1fr);}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
+  .hero{padding:16px;}
+  .topbar{padding:6px 14px;}
+}
+@media(max-width:480px){
+  .hero-img{height:200px;font-size:60px;}
+  .hero-title{font-size:18px;}
+  .logo-name{font-size:24px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .adm-stats{grid-template-columns:repeat(2,1fr);}
+  header{padding:0 14px;}
+  .search-wrap{display:none;}
+}
+
+/* Language Selector */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+}
+.lang-selector-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px;
+  z-index: 1000;
+  display: none;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.lang-dropdown.open { display: block; }
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s;
+  color: var(--text);
+}
+.lang-option:hover { background: rgba(255,255,255,0.06); }
+.lang-option.active { background: rgba(230,57,70,0.15); color: var(--red); }
+.translate-badge {
+  font-size: 9px;
+  background: var(--red);
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-right: auto;
+}
+.translating-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: var(--text);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.translating-overlay.show { display: flex; }
+
+</style>
+</head>
+<body>
+
+<!-- ADMIN MODAL -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal">
+    <div class="modal-icon">🔐</div>
+    <div class="modal-title">لوحة المالك</div>
+    <div class="modal-sub">أدخل كلمة المرور السرية للوصول</div>
+    <input type="password" id="adminPass" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkAdmin()">
+    <div class="modal-error" id="adminErr"></div>
+    <button class="modal-btn" onclick="checkAdmin()">دخول</button>
+    <button class="modal-cancel" onclick="closeModal()">إلغاء</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-panel" id="adminPanel">
+  <div class="adm-inner">
+    <div class="adm-top">
+      <div class="adm-title">🛠️ لوحة التحكم <span class="adm-badge">مالك</span></div>
+      <div style="display:flex;gap:8px;">
+        <button onclick="openAIPublisher()" style="background:linear-gradient(135deg,#e63946,#c1121f);border:none;color:#fff;padding:7px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;">🤖 نشر ذكي</button>
+        <button class="adm-logout" onclick="adminLogout()">🚪 خروج</button>
+      </div>
+    </div>
+    <div class="adm-stats">
+      <div class="adm-stat"><div class="adm-val vg">$247</div><div class="adm-lbl">أرباح اليوم</div></div>
+      <div class="adm-stat"><div class="adm-val vb">$5,830</div><div class="adm-lbl">أرباح الشهر</div></div>
+      <div class="adm-stat"><div class="adm-val vy">125K</div><div class="adm-lbl">زوار اليوم</div></div>
+      <div class="adm-stat"><div class="adm-val vr">48</div><div class="adm-lbl">مقال نُشر</div></div>
+    </div>
+    <div class="adm-chart">
+      <div class="adm-chart-lbl">📊 الأرباح — آخر 12 شهر</div>
+      <div class="adm-bars">
+        <div class="adm-bar" style="height:28%"></div><div class="adm-bar" style="height:38%"></div>
+        <div class="adm-bar" style="height:33%"></div><div class="adm-bar" style="height:48%"></div>
+        <div class="adm-bar" style="height:43%"></div><div class="adm-bar" style="height:58%"></div>
+        <div class="adm-bar" style="height:52%"></div><div class="adm-bar" style="height:68%"></div>
+        <div class="adm-bar" style="height:72%"></div><div class="adm-bar" style="height:82%"></div>
+        <div class="adm-bar" style="height:88%"></div><div class="adm-bar" style="height:100%"></div>
+      </div>
+    </div>
+    <!-- WITHDRAWAL SYSTEM -->
+    <div id="withdrawSystem">
+      <!-- TABS -->
+      <div style="display:flex;gap:8px;margin-bottom:16px;">
+        <button onclick="switchWithdraw('manual')" id="tabManual" style="flex:1;padding:9px;background:var(--red);border:none;border-radius:8px;color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;">💳 سحب يدوي</button>
+        <button onclick="switchWithdraw('auto')" id="tabAuto" style="flex:1;padding:9px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;">🤖 سحب تلقائي</button>
+      </div>
+
+      <!-- MANUAL WITHDRAW -->
+      <div id="panelManual">
+        <div style="font-size:12px;color:var(--text2);margin-bottom:10px;font-weight:700;">اختر طريقة السحب — سحب فوري بدون حد أدنى:</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;">
+          <!-- عالمي -->
+          <button onclick="selectMethod(this,'PayPal')" class="pay-method">🅿️ PayPal</button>
+          <button onclick="selectMethod(this,'Wise')" class="pay-method">🌐 Wise</button>
+          <button onclick="selectMethod(this,'Payoneer')" class="pay-method">💼 Payoneer</button>
+          <button onclick="selectMethod(this,'Stripe')" class="pay-method">💳 Stripe</button>
+          <button onclick="selectMethod(this,'USDT')" class="pay-method">₮ USDT</button>
+          <button onclick="selectMethod(this,'Bitcoin')" class="pay-method">₿ Bitcoin</button>
+          <!-- العراق -->
+          <button onclick="selectMethod(this,'ZainCash')" class="pay-method">📱 زين كاش</button>
+          <button onclick="selectMethod(this,'AsiaHawala')" class="pay-method">🏦 آسيا حوالة</button>
+          <button onclick="selectMethod(this,'FIB')" class="pay-method">🏛️ FIB</button>
+          <button onclick="selectMethod(this,'Qi Card')" class="pay-method">💳 Qi Card</button>
+          <button onclick="selectMethod(this,'MasterCard')" class="pay-method">💳 ماستركارد</button>
+          <button onclick="selectMethod(this,'SWIFT')" class="pay-method">🌍 SWIFT</button>
+        </div>
+        <div id="manualForm" style="display:none;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:14px;margin-top:8px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">المبلغ (دولار):</div>
+          <div style="display:flex;gap:8px;margin-bottom:10px;">
+            <input id="withdrawAmount" type="number" placeholder="أدخل المبلغ" style="flex:1;background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:#fff;font-family:'Tajawal',sans-serif;font-size:14px;outline:none;">
+            <button onclick="processWithdraw()" style="background:var(--red);border:none;border-radius:8px;color:#fff;padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;white-space:nowrap;">سحب الآن</button>
+          </div>
+          <div id="withdrawMsg" style="font-size:12px;min-height:16px;"></div>
+        </div>
+      </div>
+
+      <!-- AUTO WITHDRAW -->
+      <div id="panelAuto" style="display:none;">
+        <div style="background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.15);border-radius:10px;padding:14px;margin-bottom:12px;">
+          <div style="font-size:13px;font-weight:700;color:#2ecc71;margin-bottom:6px;">🤖 السحب التلقائي</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.7;">عند وصول الأرباح للمبلغ المحدد، يتم التحويل تلقائياً إلى حسابك بدون أي تدخل منك.</div>
+        </div>
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">طريقة الاستلام التلقائي:</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:12px;">
+            <button onclick="selectAutoMethod(this,'PayPal')" class="pay-method">🅿️ PayPal</button>
+            <button onclick="selectAutoMethod(this,'Wise')" class="pay-method">🌐 Wise</button>
+            <button onclick="selectAutoMethod(this,'ZainCash')" class="pay-method">📱 زين كاش</button>
+            <button onclick="selectAutoMethod(this,'USDT')" class="pay-method">₮ USDT</button>
+            <button onclick="selectAutoMethod(this,'FIB')" class="pay-method">🏛️ FIB</button>
+            <button onclick="selectAutoMethod(this,'Qi Card')" class="pay-method">💳 Qi Card</button>
+          </div>
+        </div>
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">الحد الأدنى للتحويل التلقائي (دولار):</div>
+          <input id="autoThreshold" type="number" placeholder="مثال: 50" style="width:100%;background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:#fff;font-family:'Tajawal',sans-serif;font-size:14px;outline:none;margin-bottom:10px;">
+        </div>
+        <div style="margin-bottom:10px;">
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">تكرار التحويل:</div>
+          <div style="display:flex;gap:6px;">
+            <button onclick="selectFreq(this,'عند الوصول')" class="freq-btn active-freq">عند الوصول</button>
+            <button onclick="selectFreq(this,'أسبوعي')" class="freq-btn">أسبوعي</button>
+            <button onclick="selectFreq(this,'شهري')" class="freq-btn">شهري</button>
+          </div>
+        </div>
+        <button onclick="saveAutoSettings()" style="width:100%;padding:11px;background:linear-gradient(135deg,#2ecc71,#27ae60);border:none;border-radius:10px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;">💾 حفظ الإعدادات التلقائية</button>
+        <div id="autoMsg" style="font-size:12px;text-align:center;margin-top:8px;min-height:16px;"></div>
+        <div id="autoStatus" style="display:none;margin-top:10px;background:rgba(46,204,113,0.08);border:1px solid rgba(46,204,113,0.2);border-radius:8px;padding:12px;font-size:12px;color:#2ecc71;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div style="display:flex;align-items:center;gap:6px;">
+    <span class="live-dot"></span>
+    <span id="currentDate"></span>
+  </div>
+  <div class="topbar-right">
+    <a href="#">تواصل معنا</a>
+    <a href="#">الإعلانات</a>
+    <a href="#">RSS</a>
+    <div class="topbar-weather">☀️ 32°م</div>
+  </div>
+</div>
+
+<!-- BREAKING -->
+<div class="breaking">
+  <div class="breaking-label">⚡ عاجل</div>
+  <div class="breaking-scroll">
+    <div class="breaking-inner">
+      <span>اجتماع طارئ لمجلس الأمن بشأن التطورات الأخيرة</span>
+      <span>ارتفاع حاد في أسعار النفط بعد قرارات أوبك الجديدة</span>
+      <span>نمو اقتصادي غير مسبوق في دول الخليج العربي</span>
+      <span>اكتشاف علمي جديد يغير مفهوم الطب الحديث</span>
+      <span>المنتخب يتأهل للنهائي بعد فوز تاريخي مثير</span>
+      <span>اجتماع طارئ لمجلس الأمن بشأن التطورات الأخيرة</span>
+      <span>ارتفاع حاد في أسعار النفط بعد قرارات أوبك الجديدة</span>
+      <span>نمو اقتصادي غير مسبوق في دول الخليج العربي</span>
+      <span>اكتشاف علمي جديد يغير مفهوم الطب الحديث</span>
+      <span>المنتخب يتأهل للنهائي بعد فوز تاريخي مثير</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-name">ن<span>ب</span>ض</div>
+      <div class="logo-sub">أخبار العالم</div>
+    </a>
+    <nav class="nav-links">
+      <a href="#" class="active">الرئيسية</a>
+      <a href="#">السياسة</a>
+      <a href="#">الاقتصاد</a>
+      <a href="#">التقنية</a>
+      <a href="#">الرياضة</a>
+      <a href="#">الصحة</a>
+      <a href="#">العالم</a>
+    </nav>
+    <div class="header-search">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="ابحث في الأخبار...">
+      </div>
+      <!-- Language Selector -->
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-selector-btn" onclick="toggleLangDropdown()">
+          <span id="currentLangFlag">🌍</span>
+          <span id="currentLangName">العربية</span>
+          <span>▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option active" onclick="setLanguage('ar','العربية','🇸🇦','rtl')">🇸🇦 العربية</div>
+          <div class="lang-option" onclick="setLanguage('en','English','🇺🇸','ltr')">🇺🇸 English</div>
+          <div class="lang-option" onclick="setLanguage('fr','Français','🇫🇷','ltr')">🇫🇷 Français</div>
+          <div class="lang-option" onclick="setLanguage('es','Español','🇪🇸','ltr')">🇪🇸 Español</div>
+          <div class="lang-option" onclick="setLanguage('de','Deutsch','🇩🇪','ltr')">🇩🇪 Deutsch</div>
+          <div class="lang-option" onclick="setLanguage('tr','Türkçe','🇹🇷','ltr')">🇹🇷 Türkçe</div>
+          <div class="lang-option" onclick="setLanguage('fa','فارسی','🇮🇷','rtl')">🇮🇷 فارسی</div>
+          <div class="lang-option" onclick="setLanguage('zh','中文','🇨🇳','ltr')">🇨🇳 中文</div>
+          <div class="lang-option" onclick="setLanguage('ru','Русский','🇷🇺','ltr')">🇷🇺 Русский</div>
+          <div class="lang-option" onclick="setLanguage('hi','हिन्दी','🇮🇳','ltr')">🇮🇳 हिन्दी</div>
+          <div class="lang-option" onclick="setLanguage('pt','Português','🇧🇷','ltr')">🇧🇷 Português</div>
+          <div class="lang-option" onclick="setLanguage('ur','اردو','🇵🇰','rtl')">🇵🇰 اردو</div>
+        </div>
+      </div>
+      <button class="admin-btn" onclick="openModal()" title="لوحة التحكم">⚙️</button>
+    </div>
+  </div>
+</header>
+
+<!-- AD TOP -->
+<div style="max-width:1280px;margin:16px auto;padding:0 24px;">
+  <div class="ad-slot">
+    <div class="ad-lbl">إعلان</div>
+    <div class="ad-body">📢 728 × 90 — مساحة إعلانية</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-main">
+      <div class="hero-img" style="padding:0;background:#000;"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" style="width:100%;height:100%;object-fit:cover;opacity:0.8;" alt="أخبار عالمية"></div>
+      <div class="hero-body">
+        <div class="cat-tag">🔴 عاجل</div>
+        <div class="hero-title">قمة دولية تاريخية تناقش مستقبل الاقتصاد العالمي في ظل التحولات الجيوسياسية الراهنة</div>
+        <div class="hero-excerpt">اجتمع قادة أكبر اقتصادات العالم في جلسة مغلقة رفيعة المستوى لمناقشة آليات التعاون الاقتصادي وسبل التعامل مع موجة التضخم المتصاعدة عالمياً...</div>
+        <div class="hero-meta">
+          <span>📅 منذ ساعة</span>
+          <span>👁 45,230</span>
+          <span>💬 128 تعليق</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="side-card">
+        <div class="side-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="اقتصاد"></div>
+        <div class="side-body">
+          <div class="side-cat">اقتصاد</div>
+          <div class="side-title">أسواق الخليج تسجل مكاسب قياسية في جلسة الثلاثاء</div>
+          <div class="side-meta">📅 منذ ساعتين • 18K</div>
+        </div>
+      </div>
+      <div class="side-card">
+        <div class="side-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="رياضة"></div>
+        <div class="side-body">
+          <div class="side-cat">رياضة</div>
+          <div class="side-title">المنتخب يتأهل للدور النهائي بثلاثية نظيفة</div>
+          <div class="side-meta">📅 منذ 3 ساعات • 32K</div>
+        </div>
+      </div>
+      <div class="side-card">
+        <div class="side-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="صحة"></div>
+        <div class="side-body">
+          <div class="side-cat">صحة</div>
+          <div class="side-title">علماء يكتشفون علاجاً واعداً لمرض السكري من النوع الثاني</div>
+          <div class="side-meta">📅 منذ 4 ساعات • 29K</div>
+        </div>
+      </div>
+      <div class="side-card">
+        <div class="side-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="تقنية"></div>
+        <div class="side-body">
+          <div class="side-cat">تقنية</div>
+          <div class="side-title">إطلاق ناجح لمركبة فضائية عربية في مدار الأرض</div>
+          <div class="side-meta">📅 منذ 5 ساعات • 21K</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+  <div class="content">
+    <!-- CATS -->
+    <div class="cats">
+      <button class="cat-btn active">الكل</button>
+      <button class="cat-btn">سياسة</button>
+      <button class="cat-btn">اقتصاد</button>
+      <button class="cat-btn">تقنية</button>
+      <button class="cat-btn">رياضة</button>
+      <button class="cat-btn">صحة</button>
+      <button class="cat-btn">بيئة</button>
+      <button class="cat-btn">ثقافة</button>
+      <button class="cat-btn">علوم</button>
+      <button class="cat-btn">اجتماعي</button>
+    </div>
+
+    <!-- NEWS GRID -->
+    <div class="sec-head">
+      <div class="sec-title">آخر الأخبار</div>
+      <a href="#" class="sec-more">عرض الكل ←</a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="nc-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400&q=80" style="width:100%;height:100%;object-fit:cover;" alt="سياسة"></div>
+        <div class="nc-body">
+          <div class="nc-cat">سياسة</div>
+          <div class="nc-title">مفاوضات دبلوماسية مكثفة لحل الأزمة الإقليمية المتصاعدة</div>
+          <div class="nc-meta"><span>📅 منذ 30 د</span><span>👁 12.5K</span></div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" style="width:100%;height:100%;object-fit:cover;" alt="صحة"></div>
+        <div class="nc-body">
+          <div class="nc-cat">صحة</div>
+          <div class="nc-title">دراسة: الصيام المتقطع يحسن صحة القلب بشكل ملحوظ</div>
+          <div class="nc-meta"><span>📅 منذ ساعة</span><span>👁 28.7K</span></div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&q=80" style="width:100%;height:100%;object-fit:cover;" alt="تقنية"></div>
+        <div class="nc-body">
+          <div class="nc-cat">تقنية</div>
+          <div class="nc-title">شركات السيارات الكهربائية تتسابق لإطلاق موديلات 2026</div>
+          <div class="nc-meta"><span>📅 منذ ساعتين</span><span>👁 9.3K</span></div>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="nc-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1504608524841-42584120d791?w=400&q=80" style="width:100%;height:100%;object-fit:cover;" alt="بيئة"></div>
+        <div class="nc-body">
+          <div class="nc-cat">بيئة</div>
+          <div class="nc-title">تحذيرات من موجة حر غير مسبوقة تضرب المنطقة قريباً</div>
+          <div class="nc-meta"><span>📅 منذ 3 س</span><span>👁 21K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD -->
+    <div class="ad-slot">
+      <div class="ad-lbl">إعلان</div>
+      <div class="ad-body">📢 468 × 60 — مساحة إعلانية</div>
+    </div>
+
+    <!-- MORE NEWS -->
+    <div class="sec-head">
+      <div class="sec-title">أخبار متنوعة</div>
+    </div>
+    <div class="news-list">
+      <div class="nl-item">
+        <div class="nl-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="اقتصاد"></div>
+        <div class="nl-body">
+          <div class="nl-cat">اقتصاد</div>
+          <div class="nl-title">البنوك المركزية تلمح إلى تخفيض قريب في أسعار الفائدة العالمية</div>
+          <div class="nl-meta"><span>📅 منذ 4 ساعات</span><span>👁 15.8K</span></div>
+        </div>
+      </div>
+      <div class="nl-item">
+        <div class="nl-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="تعليم"></div>
+        <div class="nl-body">
+          <div class="nl-cat">تعليم</div>
+          <div class="nl-title">مبادرات جديدة لتطوير منظومة التعليم وتحديث المناهج الدراسية</div>
+          <div class="nl-meta"><span>📅 منذ 5 ساعات</span><span>👁 8.2K</span></div>
+        </div>
+      </div>
+      <div class="nl-item">
+        <div class="nl-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="سياحة"></div>
+        <div class="nl-body">
+          <div class="nl-cat">سياحة</div>
+          <div class="nl-title">وجهات السفر الأرخص والأكثر جمالاً لصيف 2026</div>
+          <div class="nl-meta"><span>📅 منذ 6 ساعات</span><span>👁 41.5K</span></div>
+        </div>
+      </div>
+      <div class="nl-item">
+        <div class="nl-img" style="padding:0;overflow:hidden;"><img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=200&q=80" style="width:100%;height:100%;object-fit:cover;" alt="رياضة"></div>
+        <div class="nl-body">
+          <div class="nl-cat">رياضة</div>
+          <div class="nl-title">ترتيب الدوري العربي بعد الجولة الأخيرة وأبرز النتائج</div>
+          <div class="nl-meta"><span>📅 منذ 7 ساعات</span><span>👁 33.1K</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <!-- AD -->
+    <div class="ad-slot" style="margin-bottom:18px;">
+      <div class="ad-lbl">إعلان</div>
+      <div class="ad-body" style="min-height:250px;flex-direction:column;gap:6px;">📢<br>300 × 250</div>
+    </div>
+
+    <!-- TRENDING -->
+    <div class="widget">
+      <div class="widget-title"><span>🔥</span> الأكثر قراءة</div>
+      <div class="trend-item">
+        <div class="trend-num">01</div>
+        <div class="trend-body">
+          <div class="trend-title">المنتخب يحقق بطولة آسيا للمرة الثالثة في التاريخ</div>
+          <div class="trend-meta">👁 89,400 • منذ 5 ساعات</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">02</div>
+        <div class="trend-body">
+          <div class="trend-title">أسعار الذهب ترتفع لمستويات قياسية غير مسبوقة</div>
+          <div class="trend-meta">👁 67,200 • منذ 6 ساعات</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">03</div>
+        <div class="trend-body">
+          <div class="trend-title">علماء يكتشفون علاجاً واعداً لمرض السكري</div>
+          <div class="trend-meta">👁 54,100 • منذ 8 ساعات</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">04</div>
+        <div class="trend-body">
+          <div class="trend-title">وجهات السفر الأرخص لصيف 2026</div>
+          <div class="trend-meta">👁 41,500 • منذ 10 ساعات</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEATHER -->
+    <div class="widget">
+      <div class="widget-title"><span>🌤️</span> الطقس</div>
+      <div class="weather-main">
+        <div class="weather-icon">☀️</div>
+        <div class="weather-temp">32°</div>
+        <div class="weather-city">الرياض، السعودية</div>
+      </div>
+      <div class="weather-details">
+        <div class="weather-det"><div class="weather-det-val">18%</div><div class="weather-det-lbl">رطوبة</div></div>
+        <div class="weather-det"><div class="weather-det-val">12 km/h</div><div class="weather-det-lbl">رياح</div></div>
+        <div class="weather-det"><div class="weather-det-val">39°</div><div class="weather-det-lbl">أعلى</div></div>
+        <div class="weather-det"><div class="weather-det-val">24°</div><div class="weather-det-lbl">أدنى</div></div>
+      </div>
+    </div>
+
+    <!-- AD -->
+    <div class="ad-slot">
+      <div class="ad-lbl">إعلان</div>
+      <div class="ad-body" style="min-height:200px;flex-direction:column;gap:6px;">📢<br>300 × 200</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">ن<span>ب</span>ض</div>
+        <div class="footer-desc">بوابتك الإخبارية الموثوقة — نقدم أحدث الأخبار المحلية والعالمية بدقة واحترافية على مدار الساعة.</div>
+        <div class="footer-social">
+          <a class="social-btn" href="#">𝕏</a>
+          <a class="social-btn" href="#">f</a>
+          <a class="social-btn" href="#">in</a>
+          <a class="social-btn" href="#">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>الأقسام</h4>
+        <ul>
+          <li><a href="#">→ السياسة</a></li>
+          <li><a href="#">→ الاقتصاد</a></li>
+          <li><a href="#">→ التقنية</a></li>
+          <li><a href="#">→ الرياضة</a></li>
+          <li><a href="#">→ الصحة</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>الموقع</h4>
+        <ul>
+          <li><a href="#">→ من نحن</a></li>
+          <li><a href="#">→ تواصل معنا</a></li>
+          <li><a href="#">→ الإعلانات</a></li>
+          <li><a href="#">→ RSS</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>قانوني</h4>
+        <ul>
+          <li><a href="#">→ سياسة الخصوصية</a></li>
+          <li><a href="#">→ الشروط والأحكام</a></li>
+          <li><a href="#">→ سياسة الكوكيز</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 نبض — جميع الحقوق محفوظة</span>
+      <span>الأخبار الموثوقة على مدار الساعة 24/7</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Date
+const d = new Date();
+document.getElementById('currentDate').textContent =
+  d.toLocaleDateString('ar-SA',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+// Categories
+document.querySelectorAll('.cat-btn').forEach(b=>{
+  b.onclick=()=>{document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');};
+});
+
+// Admin
+const ADMIN_PASSWORD = 'N@b#D$a!i&2o26*Xq';
+let attempts=0;
+
+function openModal(){
+  document.getElementById('adminModal').classList.add('open');
+  document.getElementById('adminPass').value='';
+  document.getElementById('adminErr').textContent='';
+  setTimeout(()=>document.getElementById('adminPass').focus(),100);
+}
+function closeModal(){document.getElementById('adminModal').classList.remove('open');}
+function checkAdmin(){
+  const v=document.getElementById('adminPass').value;
+  if(v===ADMIN_PASSWORD){
+    closeModal();
+    document.getElementById('adminPanel').classList.add('open');
+    attempts=0;
+  } else {
+    attempts++;
+    document.getElementById('adminErr').textContent=`❌ كلمة مرور خاطئة (${attempts})`;
+    document.getElementById('adminPass').value='';
+    if(attempts>=5){
+      document.getElementById('adminErr').textContent='🔒 تم التعطيل مؤقتاً — انتظر دقيقة';
+      document.querySelector('.modal-btn').disabled=true;
+      setTimeout(()=>{document.querySelector('.modal-btn').disabled=false;attempts=0;document.getElementById('adminErr').textContent='';},60000);
+    }
+  }
+}
+function adminLogout(){document.getElementById('adminPanel').classList.remove('open');}
+document.getElementById('adminModal').onclick=function(e){if(e.target===this)closeModal();};
+</script>
+
+<!-- AI PUBLISHER PANEL (inside admin only) -->
+<div id="aiPublisher" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:99999;backdrop-filter:blur(10px);overflow-y:auto;">
+  <div style="max-width:800px;margin:0 auto;padding:30px 20px;">
+    <!-- Header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;">
+      <div>
+        <div style="font-size:22px;font-weight:900;color:#fff;">🤖 ناشر المحتوى الذكي</div>
+        <div style="font-size:13px;color:#9090a8;margin-top:4px;">ينشر محتوى منظم مع صور متطابقة تلقائياً</div>
+      </div>
+      <button onclick="closeAIPublisher()" style="background:rgba(255,255,255,0.08);border:none;color:#fff;width:40px;height:40px;border-radius:10px;font-size:20px;cursor:pointer;">✕</button>
+    </div>
+
+    <!-- STEP 1: Topic & Category -->
+    <div class="ai-step" id="step1">
+      <div class="step-label">الخطوة 1 — اختر التصنيف والموضوع</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;">
+        <button onclick="selectCat(this,'سياسة','politics')" class="ai-cat-btn">🏛️ سياسة</button>
+        <button onclick="selectCat(this,'اقتصاد','economy')" class="ai-cat-btn">💹 اقتصاد</button>
+        <button onclick="selectCat(this,'رياضة','sport')" class="ai-cat-btn">⚽ رياضة</button>
+        <button onclick="selectCat(this,'تقنية','technology')" class="ai-cat-btn">💻 تقنية</button>
+        <button onclick="selectCat(this,'صحة','health')" class="ai-cat-btn">🏥 صحة</button>
+        <button onclick="selectCat(this,'بيئة','nature')" class="ai-cat-btn">🌿 بيئة</button>
+        <button onclick="selectCat(this,'ثقافة','culture')" class="ai-cat-btn">🎭 ثقافة</button>
+        <button onclick="selectCat(this,'عاجل','breaking')" class="ai-cat-btn">🔴 عاجل</button>
+      </div>
+      <textarea id="aiTopic" placeholder="اكتب موضوع المقال... مثال: ارتفاع أسعار النفط وتأثيره على الاقتصاد العراقي" style="width:100%;height:80px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:14px;color:#fff;font-family:'Tajawal',sans-serif;font-size:14px;outline:none;resize:none;line-height:1.6;"></textarea>
+    </div>
+
+    <!-- STEP 2: Publishing Schedule -->
+    <div class="ai-step">
+      <div class="step-label">الخطوة 2 — جدول النشر</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        <button onclick="selectSchedule(this,'فوري')" class="ai-sched-btn active-sched">⚡ نشر فوري</button>
+        <button onclick="selectSchedule(this,'مجدول')" class="ai-sched-btn">🕐 مجدول</button>
+        <button onclick="selectSchedule(this,'تلقائي')" class="ai-sched-btn">🔄 تلقائي يومي</button>
+      </div>
+      <div id="schedTime" style="display:none;margin-top:12px;">
+        <input type="datetime-local" id="schedDateTime" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px;color:#fff;font-size:14px;outline:none;">
+      </div>
+      <div id="autoFreq" style="display:none;margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+        <button onclick="selectFreqAI(this,'كل ساعة')" class="freq-ai-btn active-freq-ai">كل ساعة</button>
+        <button onclick="selectFreqAI(this,'كل 3 ساعات')" class="freq-ai-btn">كل 3 ساعات</button>
+        <button onclick="selectFreqAI(this,'مرتين يومياً')" class="freq-ai-btn">مرتين يومياً</button>
+        <button onclick="selectFreqAI(this,'يومياً')" class="freq-ai-btn">يومياً</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Image Settings -->
+    <div class="ai-step">
+      <div class="step-label">الخطوة 3 — إعدادات الصورة</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <button onclick="selectImgMode(this,'auto')" class="ai-img-btn active-img">🤖 صورة تلقائية متطابقة</button>
+        <button onclick="selectImgMode(this,'manual')" class="ai-img-btn">🔗 رابط صورة يدوي</button>
+      </div>
+      <div id="manualImgUrl" style="display:none;margin-top:10px;">
+        <input id="customImgUrl" type="url" placeholder="https://example.com/image.jpg" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px;color:#fff;font-family:'Tajawal',sans-serif;font-size:13px;outline:none;">
+      </div>
+      <div id="imgPreview" style="margin-top:12px;border-radius:10px;overflow:hidden;height:140px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:#9090a8;font-size:13px;">
+        🖼️ ستظهر الصورة هنا بعد التوليد
+      </div>
+    </div>
+
+    <!-- GENERATE BUTTON -->
+    <button onclick="generateAIContent()" id="generateBtn" style="width:100%;padding:16px;background:linear-gradient(135deg,#e63946,#c1121f);border:none;border-radius:14px;color:#fff;font-size:17px;font-weight:800;cursor:pointer;font-family:'Tajawal',sans-serif;margin:10px 0;transition:all .3s;box-shadow:0 8px 25px rgba(230,57,70,0.3);">
+      🤖 توليد المحتوى ونشره
+    </button>
+
+    <!-- PROGRESS -->
+    <div id="aiProgress" style="display:none;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px;margin-top:10px;">
+      <div id="progressSteps"></div>
+      <div style="background:rgba(255,255,255,0.05);border-radius:50px;height:6px;margin-top:16px;overflow:hidden;">
+        <div id="progressBar" style="height:100%;background:linear-gradient(90deg,#e63946,#ff6b6b);border-radius:50px;width:0%;transition:width .5s ease;"></div>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="aiResult" style="display:none;background:rgba(46,204,113,0.05);border:1px solid rgba(46,204,113,0.2);border-radius:14px;padding:20px;margin-top:10px;">
+      <div style="font-size:15px;font-weight:700;color:#2ecc71;margin-bottom:14px;">✅ تم النشر بنجاح!</div>
+      <div id="resultContent"></div>
+    </div>
+
+    <!-- PUBLISHED LIST -->
+    <div style="margin-top:24px;">
+      <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:8px;">📋 المقالات المنشورة <span id="publishCount" style="background:var(--red);color:#fff;font-size:11px;padding:2px 8px;border-radius:50px;">0</span></div>
+      <div id="publishedList" style="display:flex;flex-direction:column;gap:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+.ai-step{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:18px;margin-bottom:14px;}
+.step-label{font-size:13px;font-weight:700;color:#9090a8;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;}
+.ai-cat-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ccc;padding:10px 6px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.ai-cat-btn:hover,.ai-cat-btn.active-cat{background:#e63946;border-color:#e63946;color:#fff;}
+.ai-sched-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ccc;padding:10px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.ai-sched-btn.active-sched{background:#e63946;border-color:#e63946;color:#fff;}
+.ai-img-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ccc;padding:11px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;}
+.ai-img-btn.active-img{background:#e63946;border-color:#e63946;color:#fff;}
+.freq-ai-btn{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#ccc;padding:8px 14px;border-radius:8px;font-family:'Tajawal',sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;}
+.freq-ai-btn.active-freq-ai{background:#e63946;border-color:#e63946;color:#fff;}
+.prog-step{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:13px;color:#9090a8;border-bottom:1px solid rgba(255,255,255,0.05);}
+.prog-step:last-child{border-bottom:none;}
+.prog-step.done{color:#2ecc71;}
+.prog-step.active{color:#fff;}
+.prog-icon{font-size:16px;width:24px;text-align:center;}
+.pub-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center;}
+.pub-thumb{width:64px;height:52px;border-radius:8px;object-fit:cover;flex-shrink:0;}
+.pub-info{}
+.pub-cat{font-size:10px;font-weight:800;color:#e63946;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;}
+.pub-title{font-size:13px;font-weight:700;color:#fff;line-height:1.4;}
+.pub-meta{font-size:11px;color:#9090a8;margin-top:4px;}
+</style>
+<script>
+
+// AI Publisher System
+let aiCategory = '';
+let aiCategoryQuery = '';
+let aiSchedule = 'فوري';
+let aiImgMode = 'auto';
+let aiFreq = 'كل ساعة';
+let publishedArticles = [];
+
+const categoryImages = {
+  'politics': 'parliament+government+politics',
+  'economy': 'stock+market+economy+finance',
+  'sport': 'football+sport+stadium',
+  'technology': 'technology+computer+digital',
+  'health': 'hospital+medical+health+doctor',
+  'nature': 'nature+environment+green',
+  'culture': 'culture+art+museum',
+  'breaking': 'news+city+breaking'
+};
+
+const categoryColors = {
+  'سياسة':'#3498db','اقتصاد':'#2ecc71','رياضة':'#e67e22',
+  'تقنية':'#9b59b6','صحة':'#e74c3c','بيئة':'#27ae60',
+  'ثقافة':'#f39c12','عاجل':'#e63946'
+};
+
+function openAIPublisher() {
+  document.getElementById('aiPublisher').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeAIPublisher() {
+  document.getElementById('aiPublisher').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function selectCat(btn, cat, query) {
+  document.querySelectorAll('.ai-cat-btn').forEach(b=>b.classList.remove('active-cat'));
+  btn.classList.add('active-cat');
+  aiCategory = cat;
+  aiCategoryQuery = query;
+}
+
+function selectSchedule(btn, sched) {
+  document.querySelectorAll('.ai-sched-btn').forEach(b=>b.classList.remove('active-sched'));
+  btn.classList.add('active-sched');
+  aiSchedule = sched;
+  document.getElementById('schedTime').style.display = sched==='مجدول'?'block':'none';
+  document.getElementById('autoFreq').style.display = sched==='تلقائي'?'flex':'none';
+}
+
+function selectImgMode(btn, mode) {
+  document.querySelectorAll('.ai-img-btn').forEach(b=>b.classList.remove('active-img'));
+  btn.classList.add('active-img');
+  aiImgMode = mode;
+  document.getElementById('manualImgUrl').style.display = mode==='manual'?'block':'none';
+}
+
+function selectFreqAI(btn, freq) {
+  document.querySelectorAll('.freq-ai-btn').forEach(b=>b.classList.remove('active-freq-ai'));
+  btn.classList.add('active-freq-ai');
+  aiFreq = freq;
+}
+
+function getImageForCategory(category) {
+  const query = categoryImages[category] || 'news+world';
+  const seed = Math.floor(Math.random() * 1000);
+  return `https://source.unsplash.com/800x500/?${query}&sig=${seed}`;
+}
+
+const contentTemplates = {
+  'سياسة': ['تصريح رسمي يكشف تفاصيل المفاوضات السياسية الجارية','مصادر دبلوماسية تؤكد قرب التوصل لاتفاق شامل','وزير الخارجية يبحث ملفات إقليمية مع نظيره'],
+  'اقتصاد': ['مؤشرات الأسواق ترتفع بعد قرارات البنك المركزي','تقرير: نمو اقتصادي يتجاوز التوقعات في الربع الأخير','استثمارات أجنبية جديدة تدخل السوق المحلية'],
+  'رياضة': ['نتائج المباريات وترتيب الدوري بعد الجولة الأخيرة','لاعب المباراة يكشف سر الفوز الكبير أمام المنافس','تطورات نقل اللاعبين وأبرز الصفقات المرتقبة'],
+  'تقنية': ['شركة تقنية عملاقة تعلن عن منتج ثوري جديد','تقرير: هذه التقنية ستغير طريقة العمل إلى الأبد','خبراء يحذرون من مخاطر الذكاء الاصطناعي على سوق العمل'],
+  'صحة': ['دراسة طبية جديدة تكشف فوائد مذهلة لغذاء شائع','منظمة الصحة العالمية تصدر توصيات جديدة للوقاية','اكتشاف علمي يفتح آفاقاً جديدة في علاج الأمراض المزمنة'],
+  'بيئة': ['تحذيرات من تغيرات مناخية تؤثر على المنطقة','مبادرات خضراء جديدة لمواجهة تحديات البيئة','تقرير: ارتفاع درجات الحرارة يتجاوز المعدلات التاريخية'],
+  'ثقافة': ['فعاليات ثقافية تجمع نخبة المبدعين العرب','معرض فني يستقطب آلاف الزوار في أول أيامه','جوائز الثقافة تُعلن أسماء الفائزين لهذا العام'],
+  'عاجل': ['خبر عاجل: مستجدات المشهد الإقليمي لحظة بلحظة','تطورات متسارعة تشهدها المنطقة منذ ساعات','مصادر موثوقة تكشف تفاصيل حدث بالغ الأهمية']
+};
+
+async function generateAIContent() {
+  const topic = document.getElementById('aiTopic').value.trim();
+  if (!aiCategory) { alert('اختر التصنيف أولاً'); return; }
+
+  const btn = document.getElementById('generateBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ جاري التوليد...';
+
+  document.getElementById('aiProgress').style.display = 'block';
+  document.getElementById('aiResult').style.display = 'none';
+
+  const steps = [
+    {icon:'🔍', text:'تحليل الموضوع وتحديد الكلمات المفتاحية'},
+    {icon:'✍️', text:'كتابة العنوان والمقدمة بأسلوب بشري'},
+    {icon:'🖼️', text:'اختيار صورة متطابقة للمحتوى'},
+    {icon:'🔍', text:'فحص المحتوى وتحسين SEO'},
+    {icon:'📤', text:'نشر المقال وفهرسته'},
+  ];
+
+  const stepsEl = document.getElementById('progressSteps');
+  stepsEl.innerHTML = steps.map((s,i)=>`<div class="prog-step" id="ps${i}"><span class="prog-icon">⏳</span>${s.text}</div>`).join('');
+
+  let progress = 0;
+  for (let i = 0; i < steps.length; i++) {
+    await new Promise(r => setTimeout(r, 700 + Math.random()*500));
+    document.getElementById(`ps${i}`).className = 'prog-step done';
+    document.getElementById(`ps${i}`).querySelector('.prog-icon').textContent = '✅';
+    if (i+1 < steps.length) {
+      document.getElementById(`ps${i+1}`).className = 'prog-step active';
+      document.getElementById(`ps${i+1}`).querySelector('.prog-icon').textContent = steps[i+1].icon;
+    }
+    progress = Math.round(((i+1)/steps.length)*100);
+    document.getElementById('progressBar').style.width = progress + '%';
+  }
+
+  // Generate content
+  const titles = contentTemplates[aiCategory] || contentTemplates['عاجل'];
+  const title = topic || titles[Math.floor(Math.random() * titles.length)];
+  const imgUrl = aiImgMode === 'manual' && document.getElementById('customImgUrl').value
+    ? document.getElementById('customImgUrl').value
+    : getImageForCategory(aiCategoryQuery);
+
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString('ar', {hour:'2-digit',minute:'2-digit'});
+  const article = { title, category: aiCategory, imgUrl, time: timeStr, schedule: aiSchedule, freq: aiFreq };
+  publishedArticles.unshift(article);
+
+  // Show result
+  document.getElementById('aiResult').style.display = 'block';
+  document.getElementById('resultContent').innerHTML = `
+    <div style="display:flex;gap:14px;align-items:flex-start;">
+      <img src="${imgUrl}" style="width:100px;height:80px;object-fit:cover;border-radius:10px;flex-shrink:0;" onerror="this.style.background='#333';this.src=''">
+      <div>
+        <div style="font-size:10px;font-weight:800;color:${categoryColors[aiCategory]||'#e63946'};margin-bottom:6px;">${aiCategory}</div>
+        <div style="font-size:15px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:8px;">${title}</div>
+        <div style="font-size:12px;color:#9090a8;">⏰ ${aiSchedule === 'فوري' ? 'نُشر الآن' : aiSchedule === 'تلقائي' ? 'تلقائي — '+aiFreq : 'مجدول'} • ${timeStr}</div>
+      </div>
+    </div>`;
+
+  // Update published list
+  updatePublishedList();
+  addArticleToPage(article);
+
+  btn.disabled = false;
+  btn.textContent = '🤖 توليد مقال جديد';
+}
+
+function updatePublishedList() {
+  const list = document.getElementById('publishedList');
+  document.getElementById('publishCount').textContent = publishedArticles.length;
+  list.innerHTML = publishedArticles.slice(0,5).map(a=>`
+    <div class="pub-item">
+      <img class="pub-thumb" src="${a.imgUrl}" onerror="this.style.background='#333'" alt="${a.category}">
+      <div class="pub-info">
+        <div class="pub-cat">${a.category}</div>
+        <div class="pub-title">${a.title}</div>
+        <div class="pub-meta">⏰ ${a.time} • ${a.schedule}</div>
+      </div>
+    </div>`).join('');
+}
+
+function addArticleToPage(article) {
+  const grid = document.querySelector('.news-grid');
+  if (!grid) return;
+  const card = document.createElement('div');
+  card.className = 'news-card';
+  card.style.animation = 'fadeInUp .5s ease';
+  card.innerHTML = `
+    <div class="nc-img" style="padding:0;overflow:hidden;">
+      <img src="${article.imgUrl}" style="width:100%;height:100%;object-fit:cover;" alt="${article.category}" onerror="this.parentElement.style.background='#1a1a28'">
+    </div>
+    <div class="nc-body">
+      <div class="nc-cat">${article.category}</div>
+      <div class="nc-title">${article.title}</div>
+      <div class="nc-meta"><span>⏰ الآن</span><span>🤖 منشور ذكي</span></div>
+    </div>`;
+  grid.insertBefore(card, grid.firstChild);
+}
+
+</script>
+
+
+
+
+<script>
+// ===== GLOBAL REAL NEWS SYSTEM =====
+
+// RSS feeds from major world news sources (via RSS2JSON proxy - free)
+const RSS_FEEDS = [
+  // 🌍 أخبار عامة عربية — مصادر متنوعة الاتجاهات
+  { url: 'https://feeds.bbcarabic.com/bbcarabic/world/rss.xml', source: 'BBC عربي', lang: 'ar', bias: 'محايد' },
+  { url: 'https://www.aljazeera.net/aljazeeraRSS/topic/عاجل', source: 'الجزيرة', lang: 'ar', bias: 'قطري' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/1036', source: 'سكاي نيوز عربية', lang: 'ar', bias: 'إماراتي' },
+  { url: 'https://www.france24.com/ar/rss', source: 'فرانس 24 عربي', lang: 'ar', bias: 'أوروبي' },
+  { url: 'https://arabic.rt.com/rss/', source: 'RT عربي', lang: 'ar', bias: 'روسي' },
+  { url: 'https://www.dw.com/ar/rss', source: 'DW عربي', lang: 'ar', bias: 'ألماني' },
+  { url: 'https://www.independentarabia.com/rss.xml', source: 'إندبندنت عربية', lang: 'ar', bias: 'بريطاني' },
+  { url: 'https://alarabiya.net/ar/rss', source: 'العربية', lang: 'ar', bias: 'سعودي' },
+
+  // 🏛️ سياسة — غرب/شرق/جنوب
+  { url: 'https://feeds.bbci.co.uk/news/politics/rss.xml', source: 'BBC Politics', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml', source: 'NYT Politics', lang: 'en', bias: 'أمريكي ليبرالي' },
+  { url: 'https://feeds.foxnews.com/foxnews/politics', source: 'Fox News Politics', lang: 'en', bias: 'أمريكي محافظ' },
+  { url: 'https://www.politico.com/rss/politics08.xml', source: 'Politico', lang: 'en', bias: 'سياسي محايد' },
+  { url: 'https://thehill.com/rss/syndicator/19109', source: 'The Hill', lang: 'en', bias: 'أمريكي وسطي' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/1', source: 'سكاي سياسة', lang: 'ar', bias: 'خليجي' },
+  { url: 'https://rss.dw.com/rss/en-world', source: 'DW World', lang: 'en', bias: 'أوروبي' },
+  { url: 'https://feeds.theguardian.com/theguardian/politics/rss', source: 'Guardian Politics', lang: 'en', bias: 'بريطاني يساري' },
+
+  // 💰 اقتصاد — مصادر مالية متنوعة
+  { url: 'https://feeds.bloomberg.com/markets/news.rss', source: 'Bloomberg Markets', lang: 'en', bias: 'مالي أمريكي' },
+  { url: 'https://www.ft.com/news-feed?format=rss', source: 'Financial Times', lang: 'en', bias: 'بريطاني مالي' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml', source: 'NYT Business', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/2', source: 'سكاي اقتصاد', lang: 'ar', bias: 'خليجي' },
+  { url: 'https://feeds.reuters.com/reuters/businessNews', source: 'Reuters Business', lang: 'en', bias: 'دولي محايد' },
+  { url: 'https://www.wsj.com/xml/rss/3_7031.xml', source: 'Wall Street Journal', lang: 'en', bias: 'أمريكي محافظ' },
+  { url: 'https://feeds.feedburner.com/entrepreneur/latest', source: 'Entrepreneur', lang: 'en', bias: 'أعمال' },
+  { url: 'https://fortune.com/feed', source: 'Fortune', lang: 'en', bias: 'أعمال أمريكي' },
+
+  // 💻 تقنية — مصادر تقنية متخصصة
+  { url: 'https://feeds.feedburner.com/TechCrunch', source: 'TechCrunch', lang: 'en', bias: 'شركات ناشئة' },
+  { url: 'https://www.wired.com/feed/rss', source: 'Wired', lang: 'en', bias: 'ثقافة تقنية' },
+  { url: 'https://www.theverge.com/rss/index.xml', source: 'The Verge', lang: 'en', bias: 'مراجعات' },
+  { url: 'https://feeds.bbci.co.uk/news/technology/rss.xml', source: 'BBC Tech', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml', source: 'NYT Tech', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.arstechnica.com/arstechnica/index', source: 'Ars Technica', lang: 'en', bias: 'تقني متعمق' },
+  { url: 'https://www.engadget.com/rss.xml', source: 'Engadget', lang: 'en', bias: 'إلكترونيات' },
+  { url: 'https://venturebeat.com/feed/', source: 'VentureBeat', lang: 'en', bias: 'ذكاء اصطناعي' },
+  { url: 'https://www.zdnet.com/news/rss.xml', source: 'ZDNet', lang: 'en', bias: 'أعمال تقنية' },
+
+  // 🏥 صحة — 80+ مصدر طبي متخصص حول العالم
+
+  // 🌍 منظمات صحية دولية
+  { url: 'https://www.who.int/rss-feeds/news-english.xml', source: 'WHO منظمة الصحة العالمية', lang: 'en', bias: 'أممي' },
+  { url: 'https://www.paho.org/en/rss.xml', source: 'PAHO أمريكا اللاتينية', lang: 'en', bias: 'أممي' },
+  { url: 'https://www.ecdc.europa.eu/en/rss.xml', source: 'ECDC أوروبا', lang: 'en', bias: 'أوروبي' },
+  { url: 'https://www.cdc.gov/media/dpk/rss/rss.xml', source: 'CDC أمريكا', lang: 'en', bias: 'أمريكي رسمي' },
+  { url: 'https://www.niaid.nih.gov/news-events/rss', source: 'NIH المعاهد الصحية', lang: 'en', bias: 'أمريكي بحثي' },
+
+  // 🏥 مستشفيات عالمية كبرى
+  { url: 'https://www.mayoclinic.org/rss/all-news', source: 'Mayo Clinic', lang: 'en', bias: 'مستشفى أمريكي' },
+  { url: 'https://www.clevelandclinic.org/newsroom/rss/', source: 'Cleveland Clinic', lang: 'en', bias: 'مستشفى أمريكي' },
+  { url: 'https://www.hopkinsmedicine.org/news/newsroom/rss', source: 'Johns Hopkins', lang: 'en', bias: 'مستشفى بحثي' },
+  { url: 'https://newsroom.uw.edu/health-medicine/rss.xml', source: 'UW Medicine', lang: 'en', bias: 'مستشفى جامعي' },
+  { url: 'https://www.mountsinai.org/about/newsroom/rss', source: 'Mount Sinai', lang: 'en', bias: 'مستشفى نيويورك' },
+  { url: 'https://www.brighamandwomens.org/about-bwh/newsroom/rss', source: 'Brigham Women Hospital', lang: 'en', bias: 'مستشفى بوسطن' },
+  { url: 'https://newsroom.ucla.edu/health/rss', source: 'UCLA Health', lang: 'en', bias: 'مستشفى كاليفورنيا' },
+  { url: 'https://www.ucsf.edu/news/topics/health/rss.xml', source: 'UCSF Health', lang: 'en', bias: 'مستشفى سان فرانسيسكو' },
+
+  // 🇬🇧 مستشفيات ومنظمات بريطانية
+  { url: 'https://www.nhs.uk/news/rss.aspx', source: 'NHS بريطانيا', lang: 'en', bias: 'بريطاني رسمي' },
+  { url: 'https://www.bma.org.uk/rss', source: 'BMA أطباء بريطانيا', lang: 'en', bias: 'نقابة أطباء' },
+  { url: 'https://www.bmj.com/rss/thebmj.xml', source: 'BMJ المجلة الطبية', lang: 'en', bias: 'مجلة طبية' },
+  { url: 'https://www.thelancet.com/rssfeed/lancet_current.xml', source: 'The Lancet', lang: 'en', bias: 'مجلة طبية عالمية' },
+  { url: 'https://www.nice.org.uk/news/rss', source: 'NICE بريطانيا', lang: 'en', bias: 'إرشادات طبية' },
+
+  // 🔬 مجلات طبية علمية محكّمة
+  { url: 'https://www.nejm.org/action/showFeed?jc=nejm&type=etoc&feed=rss', source: 'NEJM نيو إنغلاند', lang: 'en', bias: 'مجلة طبية محكمة' },
+  { url: 'https://jamanetwork.com/rss/site_3/67.xml', source: 'JAMA أمريكا', lang: 'en', bias: 'مجلة أطباء أمريكا' },
+  { url: 'https://www.nature.com/nm.rss', source: 'Nature Medicine', lang: 'en', bias: 'علمي محكم' },
+  { url: 'https://journals.plos.org/plosmedicine/feed/atom', source: 'PLOS Medicine', lang: 'en', bias: 'مفتوح المصدر' },
+  { url: 'https://academic.oup.com/rss/site_5375/advanceAccess', source: 'Oxford Medicine', lang: 'en', bias: 'أكسفورد' },
+  { url: 'https://www.cell.com/cell/current.rss', source: 'Cell Journal', lang: 'en', bias: 'خلايا وجينات' },
+
+  // 💊 أدوية وصيدلة
+  { url: 'https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml', source: 'FDA أمريكا', lang: 'en', bias: 'دواء أمريكي رسمي' },
+  { url: 'https://www.ema.europa.eu/en/news-events/rss-feeds', source: 'EMA أوروبا للأدوية', lang: 'en', bias: 'دواء أوروبي' },
+  { url: 'https://www.pharmacytimes.com/rss/news', source: 'Pharmacy Times', lang: 'en', bias: 'صيدلة' },
+  { url: 'https://www.drugdiscoverynews.com/rss', source: 'Drug Discovery News', lang: 'en', bias: 'أبحاث دوائية' },
+
+  // 🧬 أبحاث وجينات وتقنية طبية
+  { url: 'https://www.genomeweb.com/rss.xml', source: 'GenomeWeb', lang: 'en', bias: 'جينوم' },
+  { url: 'https://www.fiercebiotech.com/rss/xml', source: 'Fierce Biotech', lang: 'en', bias: 'تقنية حيوية' },
+  { url: 'https://www.biospace.com/rss/', source: 'BioSpace', lang: 'en', bias: 'علوم حيوية' },
+  { url: 'https://www.statnews.com/feed/', source: 'STAT News', lang: 'en', bias: 'صحة وعلوم' },
+  { url: 'https://www.medscape.com/rss/public/medscape-news.xml', source: 'Medscape', lang: 'en', bias: 'أطباء متخصصون' },
+
+  // 🧠 صحة نفسية
+  { url: 'https://www.psychiatry.org/news-room/rss', source: 'APA الطب النفسي', lang: 'en', bias: 'نفسي أمريكي' },
+  { url: 'https://www.mind.org.uk/news-campaigns/news/rss/', source: 'MIND بريطانيا', lang: 'en', bias: 'صحة نفسية' },
+  { url: 'https://www.psychologytoday.com/us/front-page/feed', source: 'Psychology Today', lang: 'en', bias: 'نفسي عام' },
+  { url: 'https://www.mentalhealthamerica.net/rss.xml', source: 'Mental Health America', lang: 'en', bias: 'صحة نفسية' },
+
+  // ❤️ أمراض القلب
+  { url: 'https://newsroom.heart.org/rss/', source: 'American Heart Association', lang: 'en', bias: 'قلب أمريكي' },
+  { url: 'https://www.escardio.org/News-&-Education/News/rss', source: 'ESC أوروبا للقلب', lang: 'en', bias: 'قلب أوروبي' },
+  { url: 'https://www.bhf.org.uk/news-from-the-bhf/rss', source: 'BHF بريطانيا قلب', lang: 'en', bias: 'قلب بريطاني' },
+
+  // 🦀 السرطان
+  { url: 'https://www.cancer.gov/news-events/press-releases/rss', source: 'NCI السرطان الأمريكي', lang: 'en', bias: 'سرطان أمريكي' },
+  { url: 'https://www.cancerresearchuk.org/about-us/cancer-news/rss', source: 'Cancer Research UK', lang: 'en', bias: 'سرطان بريطاني' },
+  { url: 'https://www.asco.org/news-initiatives/current-opinion/rss', source: 'ASCO علاج السرطان', lang: 'en', bias: 'أورام متخصص' },
+
+  // 🦠 أمراض معدية ووبائيات
+  { url: 'https://outbreaksnewstoday.com/feed/', source: 'Outbreak News', lang: 'en', bias: 'وبائيات' },
+  { url: 'https://www.promedmail.org/feed/', source: 'ProMED', lang: 'en', bias: 'أمراض معدية' },
+  { url: 'https://www.idse.net/rss/all-news', source: 'IDSE أمراض معدية', lang: 'en', bias: 'معدية متخصص' },
+
+  // 🤱 صحة الأم والطفل
+  { url: 'https://www.unicef.org/press-releases/rss.xml', source: 'UNICEF أطفال', lang: 'en', bias: 'أممي أطفال' },
+  { url: 'https://www.aap.org/en/news-room/news-releases/rss/', source: 'AAP أطفال أمريكا', lang: 'en', bias: 'طب أطفال' },
+  { url: 'https://www.rcog.org.uk/news/rss/', source: 'RCOG نساء وتوليد', lang: 'en', bias: 'نساء وتوليد' },
+
+  // 🦷 أسنان وعيون
+  { url: 'https://www.ada.org/en/publications/ada-news/rss', source: 'ADA أسنان أمريكا', lang: 'en', bias: 'أسنان' },
+  { url: 'https://www.aao.org/newsroom/rss', source: 'AAO عيون أمريكا', lang: 'en', bias: 'عيون' },
+
+  // 🏃 رياضة وتغذية
+  { url: 'https://www.eatright.org/news/news-releases/rss', source: 'تغذية أمريكا', lang: 'en', bias: 'تغذية' },
+  { url: 'https://www.health.harvard.edu/blog/feed', source: 'Harvard Health Blog', lang: 'en', bias: 'هارفارد طبي' },
+  { url: 'https://www.healthline.com/rss/health-news', source: 'Healthline', lang: 'en', bias: 'صحة عامة' },
+  { url: 'https://www.verywellhealth.com/news-4846951', source: 'Verywell Health', lang: 'en', bias: 'صحة يومية' },
+  { url: 'https://www.everydayhealth.com/rss/', source: 'Everyday Health', lang: 'en', bias: 'صحة يومية' },
+
+  // 🌍 صحة عالمية وإقليمية
+  { url: 'https://feeds.bbci.co.uk/news/health/rss.xml', source: 'BBC Health', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml', source: 'NYT Health', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/health', source: 'سكاي صحة عربي', lang: 'ar', bias: 'خليجي' },
+  { url: 'https://www.medicalnewstoday.com/rss/news.xml', source: 'Medical News Today', lang: 'en', bias: 'طبي متخصص' },
+  { url: 'https://feeds.webmd.com/rss/rss.aspx?RSSSource=RSS_PUBLIC', source: 'WebMD', lang: 'en', bias: 'صحة عامة' },
+  { url: 'https://www.aljazeera.net/aljazeeraRSS/topic/health', source: 'الجزيرة صحة', lang: 'ar', bias: 'عربي' },
+  { url: 'https://www.france24.com/ar/صحة/rss', source: 'فرانس 24 صحة', lang: 'ar', bias: 'فرنسي عربي' },
+  { url: 'https://www.dw.com/ar/الصحة/rss', source: 'DW صحة عربي', lang: 'ar', bias: 'ألماني' },
+
+  // 🏥 مستشفيات آسيوية وعالمية
+  { url: 'https://www.singhealth.com.sg/news/rss', source: 'SingHealth سنغافورة', lang: 'en', bias: 'آسيوي' },
+  { url: 'https://www.bumrungrad.com/en/news/rss', source: 'Bumrungrad تايلاند', lang: 'en', bias: 'آسيوي' },
+  { url: 'https://www.apollohospitals.com/news/rss', source: 'Apollo Hospitals الهند', lang: 'en', bias: 'هندي' },
+  { url: 'https://medcitynews.com/feed/', source: 'MedCity News', lang: 'en', bias: 'تقنية طبية' },
+  { url: 'https://www.fiercehealthcare.com/rss/xml', source: 'Fierce Healthcare', lang: 'en', bias: 'رعاية صحية' },
+  { url: 'https://www.modernhealthcare.com/rss', source: 'Modern Healthcare', lang: 'en', bias: 'إدارة مستشفيات' },
+  { url: 'https://www.healthcareitnews.com/rss.xml', source: 'Healthcare IT News', lang: 'en', bias: 'تقنية مستشفيات' },
+  { url: 'https://www.beckershospitalreview.com/feed', source: 'Beckers Hospital', lang: 'en', bias: 'مستشفيات أمريكية' },
+
+  // 🔬 علوم واكتشافات — متخصصة
+  { url: 'https://www.sciencedaily.com/rss/all.xml', source: 'Science Daily', lang: 'en', bias: 'أبحاث' },
+  { url: 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml', source: 'BBC Science', lang: 'en', bias: 'عام' },
+  { url: 'https://www.nasa.gov/rss/dyn/breaking_news.rss', source: 'NASA', lang: 'en', bias: 'فضاء' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml', source: 'NYT Science', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://www.newscientist.com/feed/home', source: 'New Scientist', lang: 'en', bias: 'علمي بريطاني' },
+  { url: 'https://www.scientificamerican.com/platform/rss/', source: 'Scientific American', lang: 'en', bias: 'علمي أمريكي' },
+  { url: 'https://phys.org/rss-feed/', source: 'Phys.org', lang: 'en', bias: 'فيزياء وكيمياء' },
+  { url: 'https://feeds.nationalgeographic.com/ng/News/News_Main', source: 'Nat Geo', lang: 'en', bias: 'جغرافيا وطبيعة' },
+
+  // 🎭 ثقافة وفنون — متنوعة
+  { url: 'https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', source: 'BBC Arts', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml', source: 'NYT Arts', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/culture', source: 'سكاي ثقافة', lang: 'ar', bias: 'عربي' },
+  { url: 'https://feeds.theguardian.com/theguardian/culture/rss', source: 'Guardian Culture', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://pitchfork.com/feed/feed-news/rss', source: 'Pitchfork', lang: 'en', bias: 'موسيقى' },
+  { url: 'https://variety.com/feed/', source: 'Variety', lang: 'en', bias: 'سينما وترفيه' },
+
+  // 👥 اجتماعي — متنوع
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Society.xml', source: 'NYT Society', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.bbci.co.uk/news/education/rss.xml', source: 'BBC Education', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://feeds.theguardian.com/theguardian/society/rss', source: 'Guardian Society', lang: 'en', bias: 'يساري' },
+  { url: 'https://feeds.theguardian.com/theguardian/education/rss', source: 'Guardian Education', lang: 'en', bias: 'تعليم' },
+
+  // ⚽ رياضة — مصادر متخصصة
+  { url: 'https://feeds.bbci.co.uk/sport/rss.xml', source: 'BBC Sport', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://feeds.skynews.com/feeds/rss/sport.xml', source: 'Sky Sports', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://feeds.skynewsarabia.com/web/rss/sport', source: 'سكاي رياضة', lang: 'ar', bias: 'عربي' },
+  { url: 'https://www.espn.com/espn/rss/news', source: 'ESPN', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://www.goal.com/ar/feeds/news', source: 'Goal عربي', lang: 'ar', bias: 'كرة قدم' },
+  { url: 'https://talksport.com/feed/', source: 'TalkSport', lang: 'en', bias: 'رياضة بريطانية' },
+  { url: 'https://www.bein.com/ar/news/rss/', source: 'beIN Sports عربي', lang: 'ar', bias: 'قطري رياضي' },
+  { url: 'https://www.fourfourtwo.com/rss', source: 'FourFourTwo', lang: 'en', bias: 'كرة قدم' },
+  { url: 'https://www.transfermarkt.com/rss', source: 'Transfermarkt', lang: 'en', bias: 'انتقالات' },
+  { url: 'https://sportstar.thehindu.com/rss/home/feed/', source: 'SportStar', lang: 'en', bias: 'آسيوي' },
+
+  // 🌿 بيئة ومناخ
+  { url: 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml', source: 'BBC Environment', lang: 'en', bias: 'بريطاني' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml', source: 'NYT Climate', lang: 'en', bias: 'أمريكي' },
+  { url: 'https://feeds.theguardian.com/theguardian/environment/rss', source: 'Guardian Environment', lang: 'en', bias: 'مناخي نشط' },
+  { url: 'https://grist.org/feed/', source: 'Grist', lang: 'en', bias: 'بيئي' },
+
+  // 🇨🇳 مصادر صينية — منظور آسيوي مختلف
+  { url: 'https://www.chinadaily.com.cn/rss/world_rss.xml', source: 'China Daily', lang: 'en', bias: 'صيني رسمي' },
+  { url: 'https://www.globaltimes.cn/rss/world.xml', source: 'Global Times', lang: 'en', bias: 'صيني قومي' },
+  { url: 'http://www.xinhuanet.com/english/rss/worldrss.xml', source: 'Xinhua News', lang: 'en', bias: 'وكالة صينية رسمية' },
+  { url: 'https://www.scmp.com/rss/91/feed', source: 'South China Morning Post', lang: 'en', bias: 'هونغ كونغ مستقل' },
+  { url: 'https://www.sixthtone.com/rss.xml', source: 'Sixth Tone', lang: 'en', bias: 'صيني اجتماعي' },
+  { url: 'https://supchina.com/feed/', source: 'SupChina', lang: 'en', bias: 'تحليل صيني' },
+  { url: 'https://www.chinadaily.com.cn/rss/business_rss.xml', source: 'China Daily Business', lang: 'en', bias: 'اقتصاد صيني' },
+  { url: 'https://www.globaltimes.cn/rss/economy.xml', source: 'Global Times Economy', lang: 'en', bias: 'اقتصاد صيني' },
+
+  // 🌏 مصادر آسيوية أخرى — لمزيد من التنوع
+  { url: 'https://www3.nhk.or.jp/nhkworld/en/news/feeds/all.xml', source: 'NHK Japan', lang: 'en', bias: 'ياباني' },
+  { url: 'https://feeds.feedburner.com/ndtvnews-top-stories', source: 'NDTV India', lang: 'en', bias: 'هندي' },
+  { url: 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms', source: 'Times of India', lang: 'en', bias: 'هندي' },
+  { url: 'https://www.koreaherald.com/rss.xml', source: 'Korea Herald', lang: 'en', bias: 'كوري جنوبي' },
+  { url: 'https://www.straitstimes.com/rss', source: 'Straits Times', lang: 'en', bias: 'سنغافوري' },
+
+  // 🌍 مصادر أفريقية ولاتينية
+  { url: 'https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf', source: 'AllAfrica', lang: 'en', bias: 'أفريقي' },
+  { url: 'https://www.bbc.co.uk/afrique/rss.xml', source: 'BBC Afrique', lang: 'fr', bias: 'أفريقي فرنسي' },
+  { url: 'https://feeds.bbci.co.uk/mundo/rss.xml', source: 'BBC Mundo', lang: 'es', bias: 'لاتيني' },
+  { url: 'https://en.mercopress.com/rss', source: 'MercoPress', lang: 'en', bias: 'أمريكا الجنوبية' },
+
+  // 🇷🇺 مصادر روسية
+  { url: 'https://tass.com/rss/v2.xml', source: 'TASS', lang: 'en', bias: 'روسي رسمي' },
+  { url: 'https://sputniknews.com/export/rss2/archive/index.xml', source: 'Sputnik', lang: 'en', bias: 'روسي' },
+  { url: 'https://www.rt.com/rss/', source: 'RT English', lang: 'en', bias: 'روسي إنجليزي' },
+
+  // 🇮🇷 مصادر إيرانية
+  { url: 'https://en.irna.ir/rss', source: 'IRNA', lang: 'en', bias: 'إيراني رسمي' },
+  { url: 'https://www.presstv.ir/news.rss', source: 'Press TV', lang: 'en', bias: 'إيراني' },
+
+  // 🇹🇷 مصادر تركية
+  { url: 'https://www.aa.com.tr/en/rss/default?cat=world', source: 'Anadolu Agency', lang: 'en', bias: 'تركي رسمي' },
+  { url: 'https://www.dailysabah.com/rss', source: 'Daily Sabah', lang: 'en', bias: 'تركي' },
+  { url: 'https://www.hurriyetdailynews.com/rss', source: 'Hurriyet Daily', lang: 'en', bias: 'تركي معارض' },
+];
+
+const RSS2JSON = 'https://api.rss2json.com/v1/api.json?rss_url=';
+const RSS2JSON_KEY = ''; // مجاني بدون مفتاح
+
+let allArticles = [];
+let currentCategory = 'الكل';
+
+const categoryKeywords = {
+  'سياسة': ['سياسة','حكومة','رئيس','وزير','برلمان','انتخاب','دبلوماسي','مفاوضات','قمة','اتفاقية','politics','government','president','minister','election','parliament','diplomatic','treaty','summit','senate','congress','policy'],
+  'اقتصاد': ['اقتصاد','بورصة','نفط','دولار','استثمار','تجارة','أسهم','بنك','تضخم','ميزانية','economy','stock','oil','dollar','trade','finance','market','bank','inflation','budget','gdp','investment','bloomberg'],
+  'رياضة': ['رياضة','كرة','مباراة','بطولة','لاعب','فريق','دوري','هدف','بطل','أولمبي','sport','football','soccer','match','tournament','player','team','league','goal','champion','olympic','basketball','tennis','formula'],
+  'تقنية': ['تقنية','ذكاء','تكنولوجيا','إنترنت','هاتف','تطبيق','برمجة','روبوت','فضاء','ناسا','tech','technology','AI','artificial','internet','digital','app','robot','space','nasa','software','hardware','cyber','startup'],
+  'صحة': ['صحة','طب','مرض','علاج','مستشفى','دواء','لقاح','سرطان','فيروس','وباء','health','medical','disease','treatment','hospital','vaccine','cancer','virus','pandemic','doctor','medicine','surgery','who'],
+  'علوم': ['علم','اكتشاف','بحث','فضاء','كواكب','مجرة','ناسا','تجربة','science','discovery','research','space','planet','galaxy','nasa','experiment','physics','biology','chemistry','astronomy'],
+  'بيئة': ['بيئة','مناخ','طقس','تلوث','أخضر','احترار','كوارث','زلزال','إعصار','climate','environment','weather','pollution','green','warming','disaster','earthquake','hurricane','flood','drought'],
+  'ثقافة': ['ثقافة','فن','أدب','موسيقى','سينما','رواية','مسرح','متحف','جائزة','culture','art','music','film','cinema','book','theater','museum','award','festival','literature','heritage'],
+  'اجتماعي': ['مجتمع','تعليم','أسرة','شباب','مرأة','حقوق','فقر','هجرة','لاجئ','society','education','family','youth','women','rights','poverty','migration','refugee','social','community'],
+};
+  'سياسة': ['سياسة','حكومة','رئيس','وزير','برلمان','انتخاب','politics','government','president','minister','election','parliament'],
+  'اقتصاد': ['اقتصاد','بورصة','نفط','دولار','استثمار','تجارة','economy','stock','oil','dollar','trade','finance','market'],
+  'رياضة': ['رياضة','كرة','مباراة','بطولة','لاعب','فريق','sport','football','soccer','match','tournament','player','team'],
+  'تقنية': ['تقنية','ذكاء','تكنولوجيا','إنترنت','هاتف','تطبيق','tech','technology','AI','artificial','internet','digital','app'],
+  'صحة': ['صحة','طب','مرض','علاج','مستشفى','دواء','لقاح','health','medical','disease','treatment','hospital','vaccine'],
+  'بيئة': ['بيئة','مناخ','طقس','تلوث','أخضر','climate','environment','weather','pollution','green','carbon'],
+  'ثقافة': ['ثقافة','فن','أدب','موسيقى','سينما','culture','art','music','film','cinema','book'],
+};
+
+function detectCategory(title, desc) {
+  const text = (title + ' ' + (desc||'')).toLowerCase();
+  for (const [cat, keywords] of Object.entries(categoryKeywords)) {
+    if (keywords.some(k => text.includes(k.toLowerCase()))) return cat;
+  }
+  return 'عاجل';
+}
+
+function timeAgo(dateStr) {
+  try {
+    const now = new Date();
+    const date = new Date(dateStr);
+    const diff = Math.floor((now - date) / 1000 / 60);
+    if (diff < 1) return 'الآن';
+    if (diff < 60) return `منذ ${diff} دقيقة`;
+    if (diff < 1440) return `منذ ${Math.floor(diff/60)} ساعة`;
+    return `منذ ${Math.floor(diff/1440)} يوم`;
+  } catch(e) { return 'مؤخراً'; }
+}
+
+function getImg(article) {
+  return article.thumbnail || article.enclosure?.link || '';
+}
+
+async function fetchFeed(feed) {
+  try {
+    const res = await fetch(`${RSS2JSON}${encodeURIComponent(feed.url)}&count=10`);
+    const data = await res.json();
+    if (data.status !== 'ok') return [];
+    return (data.items || []).map(item => ({
+      title: item.title || '',
+      description: item.description?.replace(/<[^>]*>/g,'').substring(0,150) || '',
+      url: item.link || '#',
+      urlToImage: getImg(item),
+      publishedAt: item.pubDate || new Date().toISOString(),
+      source: feed.source,
+      lang: feed.lang
+    }));
+  } catch(e) { return []; }
+}
+
+async function loadAllNews() {
+  showLoading();
+  
+  // Fetch from multiple sources simultaneously
+  const promises = RSS_FEEDS.map(feed => fetchFeed(feed));
+  const results = await Promise.allSettled(promises);
+  
+  allArticles = [];
+  results.forEach(r => {
+    if (r.status === 'fulfilled') allArticles.push(...r.value);
+  });
+
+  // Sort by date (newest first)
+  allArticles.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  
+  // Remove duplicates
+  const seen = new Set();
+  allArticles = allArticles.filter(a => {
+    if (seen.has(a.title)) return false;
+    seen.add(a.title);
+    return true;
+  });
+
+  if (allArticles.length === 0) {
+    showFallbackNews();
+    return;
+  }
+
+  renderNews(allArticles);
+  updateTicker(allArticles);
+}
+
+function filterByCategory(cat) {
+  currentCategory = cat;
+  if (cat === 'الكل') {
+    renderNews(allArticles);
+  } else {
+    const filtered = allArticles.filter(a => detectCategory(a.title, a.description) === cat);
+    renderNews(filtered.length > 0 ? filtered : allArticles);
+  }
+}
+
+function showLoading() {
+  const newsGrid = document.querySelector('.news-grid');
+  if (newsGrid) newsGrid.innerHTML = `
+    <div style="grid-column:1/-1;text-align:center;padding:50px 20px;color:#9090a8;">
+      <div style="font-size:40px;margin-bottom:12px;animation:spin 1s linear infinite;display:inline-block;">⟳</div>
+      <div style="font-size:15px;">جاري تحميل أحدث أخبار العالم...</div>
+    </div>`;
+}
+
+function renderNews(articles) {
+  if (!articles || articles.length === 0) { showFallbackNews(); return; }
+
+  // Hero main - first article
+  const heroImg = document.querySelector('.hero-main .hero-img');
+  const heroBody = document.querySelector('.hero-main .hero-body');
+  
+  if (heroImg && articles[0]) {
+    const a = articles[0];
+    heroImg.style.padding = '0';
+    heroImg.style.overflow = 'hidden';
+    if (a.urlToImage) {
+      heroImg.innerHTML = `<img src="${a.urlToImage}" style="width:100%;height:100%;object-fit:cover;opacity:0.85;" alt="${a.title}" onerror="this.style.display='none'">`;
+    }
+  }
+  
+  if (heroBody && articles[0]) {
+    const a = articles[0];
+    const cat = detectCategory(a.title, a.description);
+    heroBody.innerHTML = `
+      <div class="cat-tag" style="cursor:pointer;" onclick="window.open('${a.url}','_blank')">🔴 ${cat}</div>
+      <div class="hero-title" style="cursor:pointer;" onclick="window.open('${a.url}','_blank')">${a.title}</div>
+      <div class="hero-excerpt">${a.description}</div>
+      <div class="hero-meta">
+        <span>📅 ${timeAgo(a.publishedAt)}</span>
+        <span>📰 ${a.source}</span>
+        <span style="color:#e63946;cursor:pointer;" onclick="window.open('${a.url}','_blank')">اقرأ المزيد ←</span>
+      </div>`;
+  }
+
+  // Hero side - articles 1-4
+  const heroSide = document.querySelector('.hero-side');
+  if (heroSide && articles.length > 1) {
+    heroSide.innerHTML = articles.slice(1, 5).map(a => {
+      const cat = detectCategory(a.title, a.description);
+      return `
+        <div class="side-card" onclick="window.open('${a.url}','_blank')" style="cursor:pointer;">
+          <div class="side-img" style="padding:0;overflow:hidden;background:#1a1a28;">
+            ${a.urlToImage 
+              ? `<img src="${a.urlToImage}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">`
+              : '<div style="font-size:28px;display:flex;align-items:center;justify-content:center;height:100%;">📰</div>'}
+          </div>
+          <div class="side-body">
+            <div class="side-cat">${cat} • ${a.source}</div>
+            <div class="side-title">${a.title.substring(0,65)}${a.title.length>65?'...':''}</div>
+            <div class="side-meta">📅 ${timeAgo(a.publishedAt)}</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // News grid - articles 5-12
+  const newsGrid = document.querySelector('.news-grid');
+  if (newsGrid && articles.length > 5) {
+    newsGrid.innerHTML = articles.slice(5, 17).map(a => {
+      const cat = detectCategory(a.title, a.description);
+      return `
+        <div class="news-card" onclick="window.open('${a.url}','_blank')" style="cursor:pointer;">
+          <div class="nc-img" style="padding:0;overflow:hidden;background:#1a1a28;">
+            ${a.urlToImage 
+              ? `<img src="${a.urlToImage}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">`
+              : '<div style="font-size:48px;display:flex;align-items:center;justify-content:center;height:100%;">📰</div>'}
+          </div>
+          <div class="nc-body">
+            <div class="nc-cat">${cat}</div>
+            <div class="nc-title">${a.title.substring(0,80)}${a.title.length>80?'...':''}</div>
+            <div class="nc-meta">
+              <span>📅 ${timeAgo(a.publishedAt)}</span>
+              <span>📰 ${a.source}</span>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // News list - articles 13+
+  const newsList = document.querySelector('.news-list');
+  if (newsList && articles.length > 13) {
+    newsList.innerHTML = articles.slice(17, 30).map(a => {
+      const cat = detectCategory(a.title, a.description);
+      return `
+        <div class="nl-item" onclick="window.open('${a.url}','_blank')" style="cursor:pointer;">
+          <div class="nl-img" style="padding:0;overflow:hidden;background:#1a1a28;">
+            ${a.urlToImage 
+              ? `<img src="${a.urlToImage}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" onerror="this.style.display='none'">`
+              : '<div style="font-size:28px;display:flex;align-items:center;justify-content:center;height:100%;">📰</div>'}
+          </div>
+          <div class="nl-body">
+            <div class="nl-cat">${cat}</div>
+            <div class="nl-title">${a.title.substring(0,90)}${a.title.length>90?'...':''}</div>
+            <div class="nl-meta">
+              <span>📅 ${timeAgo(a.publishedAt)}</span>
+              <span>📰 ${a.source}</span>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // Update trending sidebar
+  updateTrending(articles);
+}
+
+function updateTicker(articles) {
+  const ticker = document.querySelector('.breaking-inner');
+  if (!ticker || articles.length === 0) return;
+  const items = articles.slice(0, 15).map(a => `<span>${a.title}</span>`).join('');
+  ticker.innerHTML = items + items;
+}
+
+function updateTrending(articles) {
+  const trendingEl = document.querySelector('.widget');
+  if (!trendingEl) return;
+  const topArticles = articles.slice(0, 4);
+  const trendHTML = `
+    <div class="widget-title"><span>🔥</span> الأكثر قراءة</div>
+    ${topArticles.map((a, i) => `
+      <div class="trend-item" onclick="window.open('${a.url}','_blank')" style="cursor:pointer;">
+        <div class="trend-num">0${i+1}</div>
+        <div class="trend-body">
+          <div class="trend-title">${a.title.substring(0,60)}${a.title.length>60?'...':''}</div>
+          <div class="trend-meta">📰 ${a.source} • ${timeAgo(a.publishedAt)}</div>
+        </div>
+      </div>`).join('')}`;
+  trendingEl.innerHTML = trendHTML;
+}
+
+function showFallbackNews() {
+  const newsGrid = document.querySelector('.news-grid');
+  if (newsGrid) newsGrid.innerHTML = `
+    <div style="grid-column:1/-1;text-align:center;padding:40px;color:#9090a8;">
+      <div style="font-size:40px;margin-bottom:12px;">📡</div>
+      <div>تعذّر تحميل الأخبار — تحقق من الاتصال وأعد المحاولة</div>
+      <button onclick="loadAllNews()" style="margin-top:16px;background:#e63946;border:none;color:#fff;padding:10px 24px;border-radius:8px;font-size:14px;cursor:pointer;font-family:'Tajawal',sans-serif;">🔄 إعادة المحاولة</button>
+    </div>`;
+}
+
+// Category buttons
+document.querySelectorAll('.cat-btn').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('.cat-btn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    filterByCategory(b.textContent.trim());
+  };
+});
+
+// Add spin animation
+const spinStyle = document.createElement('style');
+spinStyle.textContent = '@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}';
+document.head.appendChild(spinStyle);
+
+// Load on start
+window.addEventListener('load', loadAllNews);
+
+// Auto refresh every 3 minutes
+setInterval(loadAllNews, 3 * 60 * 1000);
+</script>
+
+
+<!-- Translating Overlay -->
+<div class="translating-overlay" id="translatingOverlay">
+  <div style="animation:spin 1s linear infinite;display:inline-block;">⟳</div>
+  <span id="translatingText">جاري الترجمة...</span>
+</div>
+
+<script>
+// ===== TRANSLATION SYSTEM =====
+let currentLang = 'ar';
+let currentDir = 'rtl';
+let translationCache = {};
+
+const MYMEMORY_API = 'https://api.mymemory.translated.net/get';
+
+// Auto-detect user language
+function detectUserLanguage() {
+  const browserLang = navigator.language || navigator.userLanguage;
+  const langCode = browserLang.split('-')[0].toLowerCase();
+  const supported = ['ar','en','fr','es','de','tr','fa','zh','ru','hi','pt','ur'];
+  
+  const langMap = {
+    'ar': ['العربية','🇸🇦','rtl'],
+    'en': ['English','🇺🇸','ltr'],
+    'fr': ['Français','🇫🇷','ltr'],
+    'es': ['Español','🇪🇸','ltr'],
+    'de': ['Deutsch','🇩🇪','ltr'],
+    'tr': ['Türkçe','🇹🇷','ltr'],
+    'fa': ['فارسی','🇮🇷','rtl'],
+    'zh': ['中文','🇨🇳','ltr'],
+    'ru': ['Русский','🇷🇺','ltr'],
+    'hi': ['हिन्दी','🇮🇳','ltr'],
+    'pt': ['Português','🇧🇷','ltr'],
+    'ur': ['اردو','🇵🇰','rtl'],
+  };
+
+  if (supported.includes(langCode) && langCode !== 'ar') {
+    const [name, flag, dir] = langMap[langCode];
+    setLanguage(langCode, name, flag, dir);
+  }
+}
+
+async function translateText(text, targetLang) {
+  if (!text || targetLang === 'ar') return text;
+  
+  const cacheKey = `${text}_${targetLang}`;
+  if (translationCache[cacheKey]) return translationCache[cacheKey];
+
+  try {
+    const res = await fetch(`${MYMEMORY_API}?q=${encodeURIComponent(text)}&langpair=ar|${targetLang}`);
+    const data = await res.json();
+    if (data.responseStatus === 200) {
+      const translated = data.responseData.translatedText;
+      translationCache[cacheKey] = translated;
+      return translated;
+    }
+  } catch(e) {}
+  return text;
+}
+
+async function translatePage(lang) {
+  if (lang === 'ar') return;
+  
+  const overlay = document.getElementById('translatingOverlay');
+  overlay.classList.add('show');
+
+  // Translate all news titles and descriptions
+  const titles = document.querySelectorAll('.hero-title, .side-title, .nc-title, .nl-title, .trend-title');
+  const descs = document.querySelectorAll('.hero-excerpt, .nc-meta, .nl-meta');
+
+  let count = 0;
+  const total = titles.length;
+
+  for (const el of titles) {
+    if (el.dataset.originalText) {
+      el.textContent = await translateText(el.dataset.originalText, lang);
+    } else {
+      el.dataset.originalText = el.textContent;
+      el.textContent = await translateText(el.textContent, lang);
+    }
+    count++;
+    document.getElementById('translatingText').textContent = 
+      `Translating... ${Math.round((count/total)*100)}%`;
+  }
+
+  overlay.classList.remove('show');
+}
+
+function setLanguage(lang, name, flag, dir) {
+  currentLang = lang;
+  currentDir = dir;
+  
+  // Update UI
+  document.getElementById('currentLangFlag').textContent = flag;
+  document.getElementById('currentLangName').textContent = name;
+  document.getElementById('langDropdown').classList.remove('open');
+  
+  // Update active state
+  document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
+  event?.target?.classList.add('active');
+
+  // Update page direction
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', dir);
+  document.body.style.direction = dir;
+  document.body.style.textAlign = dir === 'rtl' ? 'right' : 'left';
+
+  // Translate if not Arabic
+  if (lang !== 'ar') {
+    translatePage(lang);
+  } else {
+    // Restore Arabic
+    document.querySelectorAll('[data-original-text]').forEach(el => {
+      el.textContent = el.dataset.originalText;
+    });
+  }
+  
+  // Save preference
+  localStorage.setItem('nabdai_lang', JSON.stringify({lang, name, flag, dir}));
+}
+
+function toggleLangDropdown() {
+  document.getElementById('langDropdown').classList.toggle('open');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('#langSelector')) {
+    document.getElementById('langDropdown').classList.remove('open');
+  }
+});
+
+// Load saved language preference
+window.addEventListener('load', () => {
+  const saved = localStorage.getItem('nabdai_lang');
+  if (saved) {
+    const {lang, name, flag, dir} = JSON.parse(saved);
+    if (lang !== 'ar') setLanguage(lang, name, flag, dir);
+  } else {
+    detectUserLanguage();
+  }
+});
+</script>
+
+</body>
+</html>
